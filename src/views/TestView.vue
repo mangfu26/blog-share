@@ -64,7 +64,7 @@ export default {
 
         /**
          * @function 子路由事件处理函数, 跳转到上一页(上一个步骤)
-         * @param {*} index 子路由组件的下标
+         * @param {*} data 子路由组件传递的数据
          */
         const prevPage = (data) => {
             router.push(stepsItems.value[data.value.index - 1].to);
@@ -72,6 +72,7 @@ export default {
 
         /**
          * @function 子路由事件处理函数, 步骤完成
+         * @param {*} data 子路由组件传递的数据
          */
         const complete = (data) => {
             // 这里做步骤完成后的操作, 这里为了演示只是进行了简单的提示,和打印控制台
